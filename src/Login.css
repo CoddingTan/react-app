@@ -1,0 +1,28 @@
+/* 最外面的容器样式 */
+.container{
+    flex: 1 ;
+    width: 100%;
+    flex-direction: column;
+    background-color: blueviolet ;
+}
+ /* line-height属性 针对自己文字居中  或者可以在div里面再嵌套一个子标签就可以通过 justifyContent跟alignItems居中了*/
+.loginTitle{
+    flex-direction: row;
+    width: 100%;
+    height: 160px;
+    line-height: 160px; 
+    background-color: rgb(90, 63, 63);
+   text-align: center ;
+   color: aqua ;
+   align-items: center ;
+}
+.content {
+     flex: 1;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center ;
+}
+
+.inputValue{
+    width: 100% ;
+}
