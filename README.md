@@ -5,11 +5,12 @@
  总结：父组件的某一个地方点击，如果父组件extends PureComponent那么子组件的Componet的ComponentReciver方法不会被调用，也就是说如果父组件用的extends ComPonent 如果父组件的其它处发生setState方法，那么该父组件的每个直接子组件每次都会被渲染  如果在父组件调用了传递给子组件的props属性发生改变那么所有的子组件都会被渲染 重新调用Component方法  
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### react-redux入门搭建  
-https://blog.csdn.net/qq_40621718/article/details/80170368
-##3 React-router V4 中BrowserRouter和HashRouter的区别  
-http://zhangdajia.com/2018/11/30/React-router-v4%E4%B8%ADBrowserRouter%E5%92%8CHashRouter%E7%9A%84%E5%8C%BA%E5%88%AB/
-
+### react-redux入门搭建    
+https://blog.csdn.net/qq_40621718/article/details/80170368  
+##3 React-router V4 中BrowserRouter和HashRouter的区别    
+http://zhangdajia.com/2018/11/30/React-router-v4%E4%B8%ADBrowserRouter%E5%92%8CHashRouter%E7%9A%84%E5%8C%BA%E5%88%AB/ 
+显示效果如下：   
+![Alt text](https://github.com/gdchent/react-app/blob/master/home_result.png)
 ## Available Scripts
 
 In the project directory, you can run:
