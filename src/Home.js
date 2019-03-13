@@ -2,7 +2,7 @@
  * @Author: chentao 
  * @Date: 2019-03-13 10:37:39 
  * @Last Modified by: chentao
- * @Last Modified time: 2019-03-13 16:18:54
+ * @Last Modified time: 2019-03-13 17:15:45
  */
 import React from 'react';
 import {connect} from 'react-redux';
@@ -13,15 +13,25 @@ class Home extends React.Component{
     componentDidMount=()=>{
         this.props.queryData("data_params")
     }
-    
+    /**
+     * 示例代码 (常见需求):比如一个输入框输入事件触发redux
+     */
     //渲染组件
     render(){
-        const {}=this.props
+        const {inputRes,isRequestFinish,res}=this.props
         console.log('props',this.props)
         return (
             <div>
                  <div> 我是Home组件</div>
                  <div onClick={this.goToPage}>点击跳转到Login页面</div>
+                 <input placeholder='请输入东西' onChange={(event)=>{
+                        //调用redux函数
+                        this.props.inputMyData(event.target.value)
+                 }} />
+                 <div>{inputRes}</div>
+                 {
+                     isRequestFinish?<div>{JSON.stringify(res)}</div>:null
+                 }
             </div>
         )
     }
@@ -49,7 +59,7 @@ function mapDispatchToProps(dispatch) {
     return {
       
         queryData: (params) => dispatch(HomeAction.queryData(params)),
-    
+        inputMyData:(params) =>dispatch(HomeAction.inputData(params))  //同步输入框输入事件
     }
 }
 
