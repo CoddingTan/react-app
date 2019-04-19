@@ -70,7 +70,6 @@ function mapStateToProps(state) {
  */
 function mapDispatchToProps(dispatch) {
     return {
-
         queryData: (params) => dispatch(HomeAction.queryData(params)),
         inputMyData: (params) => dispatch(HomeAction.inputData(params))  //同步输入框输入事件
     }

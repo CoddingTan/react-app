@@ -18,7 +18,7 @@ export default class App extends React.Component {
         console.log('children', this.props.children)
         return (
             <div>
-                <div>父组件最外层的容器</div>
+                <div>父组件最外层的容器test</div>
                 {this.props.children}</div>
         )
     }
